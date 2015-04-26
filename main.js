@@ -1,4 +1,7 @@
-$.getJSON("config.json", function (data) {
+window.cfg = [];
+window.cfg_bool = [];
+
+$.getJSON("config.json", function(data) {
     window.cfg = [
         data.style.heading_font,
         data.style.link_font,
@@ -72,7 +75,7 @@ $.getJSON("config.json", function (data) {
 });
 
 function evenContainerHeight() {
-	if(window.innerHeight % 2 == 0) {
+	if (window.innerHeight % 2 == 0) {
 		document.getElementById("container").style.height = window.innerHeight;
 	}
     else {
@@ -89,10 +92,10 @@ document.addEventListener("DOMContentLoaded", function() {
     document.getElementById("searchinput").addEventListener("keypress", function search(a) {
         var key = a.keyCode;
 
-        if(key == 13) {
+        if (key == 13) {
             var query = this.value;
 
-            if(!window.cfg_bool[1]) {
+            if (!window.cfg_bool[1]) {
                 switch(query.substr(0,3)) {
                     default:
                         window.location = "https://duckduckgo.com/?q=" + query.replaceChars(" ", "+");
@@ -120,7 +123,7 @@ document.addEventListener("DOMContentLoaded", function() {
     document.addEventListener("keypress", function search(a) {
         var key = a.keyCode;
 
-        if(key == 9) {
+        if (key == 9) {
             var search_sqr = document.getElementById("search_sqr");
             search_sqr.style.height = (300 + 37) + "px";
             search_sqr.style.borderTop = cfg[9] + " solid " + cfg[8];
@@ -129,7 +132,7 @@ document.addEventListener("DOMContentLoaded", function() {
             document.getElementById("searchinput").focus();
         }
     
-        if([9].indexOf(key) > -1) {
+        if ([9].indexOf(key) > -1) {
             a.preventDefault();
         }
     });
@@ -138,24 +141,24 @@ document.addEventListener("DOMContentLoaded", function() {
     var i = 0;
     var lenSqr = sqr.length;
 
-    if(!window.cfg_bool[2]) {
-        for(i = 0; i < lenSqr; ++i) {
+    if (!window.cfg_bool[2]) {
+        for (i = 0; i < lenSqr; ++i) {
             sqr[i].addEventListener("mouseover", expand, false);
             sqr[i].addEventListener("mouseout", contract, false);
         }
     }
     else {
-        for(i = 0; i < lenSqr; ++i) {
+        for (i = 0; i < lenSqr; ++i) {
             var a = 0;
 
-            for(var x = 0; x < lenSqr; ++x) {
-                if(a<sqr[x].getElementsByTagName("a").length) {
+            for (var x = 0; x < lenSqr; ++x) {
+                if (a < sqr[x].getElementsByTagName("a").length) {
                     a = sqr[x].getElementsByTagName("a").length;
                 }
             }
             sqr[i].style.height = (225 + 25 * a) + "px";
 
-            if(window.cfg_bool[0]) {
+            if (window.cfg_bool[0]) {
                 sqr[i].style.borderTop = cfg[9] + " solid " + cfg[8];
                 sqr[i].style.borderBottom = cfg[9] + " solid " + cfg[8];
             }
@@ -167,14 +170,14 @@ function expand() {
 	var acount = this.getElementsByTagName("a").length;
     var icount = this.getElementsByTagName("input").length;
 
-    if(icount >= 1) {
+    if (icount >= 1) {
         this.style.height = (300 + 37 * icount) + "px";
     }
     else {
         this.style.height = (300 + 25 * acount) + "px";
     }
 
-    if(window.cfg_bool[0]) {
+    if (window.cfg_bool[0]) {
         this.style.borderTop = cfg[9] + " solid " + cfg[8];
         this.style.borderBottom = cfg[9] + " solid " + cfg[8];
     }
@@ -191,8 +194,8 @@ String.prototype.replaceChars = function(character, replacement) {
     var b;
     var strLen = str.length;
 
-    for(var i = 0; i < strLen; i++){
-        if(str.charAt(i) == character){
+    for (var i = 0; i < strLen; i++){
+        if (str.charAt(i) == character){
             a = str.substr(0, i) + replacement;
             b = str.substr(i + 1);
             str = a + b;
