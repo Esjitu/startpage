@@ -1,4 +1,4 @@
-$.getJSON("config.json", function(data) {
+$.getJSON("config.json", function (data) {
     window.cfg = [
         data.style.heading_font,
         data.style.link_font,
@@ -54,9 +54,9 @@ $.getJSON("config.json", function(data) {
         "backgroundColor": cfg[11]
     });
 
-    if(cfg_bool[3]) {
+    if (window.cfg_bool[3]) {
         $("#bgimg").css({
-            "backgroundImage": "url('" +  cfg[12] + "')",
+            "backgroundImage": "url('" + cfg[12] + "')",
             "bottom": cfg[13],
             "right": cfg[14],
             "height": cfg[15],
@@ -84,7 +84,7 @@ window.onresize = function() {
 	evenContainerHeight();
 };
 
-window.onload = function() {
+document.addEventListener("DOMContentLoaded", function() {
 	evenContainerHeight();
     document.getElementById("searchinput").addEventListener("keypress", function search(a) {
         var key = a.keyCode;
@@ -161,7 +161,7 @@ window.onload = function() {
             }
         }
     }
-};
+});
 
 function expand() {
 	var acount = this.getElementsByTagName("a").length;
