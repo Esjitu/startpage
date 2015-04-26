@@ -1,6 +1,7 @@
 body{
 	overflow: hidden;
 }
+
 a {
 	text-decoration:none;
     line-height:25px;
@@ -17,6 +18,7 @@ a {
 	width:100%;
 	display:table;
 }
+
 #cell {
 	display:table-cell;
 	vertical-align:middle;
@@ -39,6 +41,7 @@ a {
 	margin:0 10px 0;
 	line-height:25px;
 }
+
 span {
 	width:inherit;
 	height:inherit;

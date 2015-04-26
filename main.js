@@ -25,27 +25,41 @@ $.getJSON("config.json", function(data){
         data.bool.alwaysopen,
         data.bool.mascot
     ];
-    $("span").css("fontFamily", cfg[0]);
-    $("a").css("fontFamily", cfg[1]);
-    $("span").css("fontSize", cfg[2]);
-    $("a").css("fontSize", cfg[3]);
-    $("body").css("backgroundColor", cfg[4]);
-    $(".sqr").css("backgroundColor", cfg[5]);
-    $("span").css("color", cfg[6]);
-    $("a").css("color", cfg[7]);
-    $(".sqr").css("borderTop", "0 solid " + cfg[8]);
-    $(".sqr").css("borderBottom", "0 solid " + cfg[8]);
-    $("#searchinput").css("color", cfg[10]);
-    $("#searchinput").css("backgroundColor", cfg[11]);
+    $("span").css({
+        "fontFamily": cfg[0],
+        "fontSize": cfg[2],
+        "color": cfg[6]
+    });
+    $("a").css({
+        "fontFamily": cfg[1],
+        "fontSize": cfg[3],
+        "color": cfg[7]
+    });
+    $("body").css({
+        "backgroundColor": cfg[4]
+    });
+    $(".sqr").css({
+        "backgroundColor": cfg[5],
+        "borderTop": "0 solid " + cfg[8],
+        "borderBottom": "0 solid " + cfg[8]
+    });
+    $("#searchinput").css({
+        "color": cfg[10],
+        "backgroundColor": cfg[11]
+    });
     if(cfg_bool[3]){
-        $("#bgimg").css("backgroundImage", "url('" +  cfg[12] + "')");
-        $("#bgimg").css("bottom", cfg[13]);
-        $("#bgimg").css("right", cfg[14]);
-        $("#bgimg").css("height", cfg[15]);
-        $("#bgimg").css("width", cfg[16]);
-        $("#bgimg").css("opacity", cfg[17]);
+        $("#bgimg").css({
+            "backgroundImage": "url('" +  cfg[12] + "')",
+            "bottom": cfg[13],
+            "right": cfg[14],
+            "height": cfg[15],
+            "width": cfg[16],
+            "opacity": cfg[17]
+        });
     }else{
-        $("#bgimg").css("backgroundImage", "");
+        $("#bgimg").css({
+            "backgroundImage": ""
+        });
     }
 });
 
@@ -59,7 +73,7 @@ function evenContainerHeight(){
 
 window.onresize = function(){
 	evenContainerHeight();
-}
+};
 
 window.onload = function(){
 	evenContainerHeight();
@@ -103,7 +117,7 @@ window.onload = function(){
     document.addEventListener("keypress", function search(a){
         var key = a.keyCode;
         if(key == 9){
-            var search_sqr = document.getElementById("search_sqr")
+            var search_sqr = document.getElementById("search_sqr");
             search_sqr.style.height=300+37+"px";
             search_sqr.style.borderTop= cfg[9] + " solid " + cfg[8];
             search_sqr.style.borderBottom= cfg[9] + " solid " + cfg[8];
@@ -116,15 +130,18 @@ window.onload = function(){
     });
 
     var sqr = document.querySelectorAll(".sqr");
+    var i = 0;
+    var lenSqr = sqr.length;
+
     if(!cfg_bool[2]){
-        for(var i = 0; i < sqr.length; ++i) {
+        for(i = 0; i < lenSqr; ++i) {
             sqr[i].addEventListener("mouseover", expand, false);
             sqr[i].addEventListener("mouseout", contract, false);
         }
     }else{
-        for(var i = 0; i < sqr.length; ++i){
+        for(i = 0; i < lenSqr; ++i){
             var a = 0;
-            for(var x = 0; x < sqr.length; ++x){
+            for(var x = 0; x < lenSqr; ++x){
                 if(a<sqr[x].getElementsByTagName("a").length){
                     a = sqr[x].getElementsByTagName("a").length;
                 }
@@ -136,7 +153,7 @@ window.onload = function(){
             }
         }
     }
-}
+};
 
 function expand(){
 	var acount = this.getElementsByTagName("a").length;
@@ -161,7 +178,9 @@ String.prototype.replaceChars = function(character, replacement){
     var str = this;
     var a;
     var b;
-    for(var i=0; i < str.length; i++){
+    var strLen = str.length;
+
+    for(var i=0; i < strLen; i++){
         if(str.charAt(i) == character){
             a = str.substr(0, i) + replacement;
             b = str.substr(i + 1);
@@ -169,9 +188,9 @@ String.prototype.replaceChars = function(character, replacement){
         }
     }
     return str;
-}
+};
 
 window.onunload = function(){
     delete window.cfg;
     delete window.cfg_bool;
-}
+};
