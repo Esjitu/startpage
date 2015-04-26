@@ -1,8 +1,8 @@
 startpage
 ====
 
-![example screenshot (150418)](https://i.imgur.com/ZnPnUyI.png)
-![example screenshot expanded (150418)](https://i.imgur.com/ocMph4I.png)
+![example screenshot (150418)](https://i.imgur.com/WU5wngQ.png)
+![example screenshot expanded (150418)](https://i.imgur.com/ihojZtG.png)
 
 
 <br>
@@ -40,13 +40,10 @@ Keep the structure like this:
 <br>
 ###### advanced search
 ```
--g      Google
--a      DuckDuckGo
 -d      danbooru
--y      YouTube
 -n      niconicodouga
 -p      pixiv
 ```
-The following example will search for _github_ using _Google_.<br>
--g github<br>
+The following example will search for _github_ using _Google_. (using DuckDuckGo)<br>
+!g github<br>
 For danbooru, use underscores (_) for tags with more than one word and separate multiple tags with space (e.g.: school_uniform 1girl).
