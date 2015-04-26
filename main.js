@@ -92,7 +92,7 @@ window.onload = function() {
         if(key == 13) {
             var query = this.value;
 
-            if(!cfg_bool[1]) {
+            if(!window.cfg_bool[1]) {
                 switch(query.substr(0,3)) {
                     default:
                         window.location = "https://duckduckgo.com/?q=" + query.replaceChars(" ", "+");
@@ -138,7 +138,7 @@ window.onload = function() {
     var i = 0;
     var lenSqr = sqr.length;
 
-    if(!cfg_bool[2]) {
+    if(!window.cfg_bool[2]) {
         for(i = 0; i < lenSqr; ++i) {
             sqr[i].addEventListener("mouseover", expand, false);
             sqr[i].addEventListener("mouseout", contract, false);
@@ -155,7 +155,7 @@ window.onload = function() {
             }
             sqr[i].style.height = (225 + 25 * a) + "px";
 
-            if(cfg_bool[0]) {
+            if(window.cfg_bool[0]) {
                 sqr[i].style.borderTop = cfg[9] + " solid " + cfg[8];
                 sqr[i].style.borderBottom = cfg[9] + " solid " + cfg[8];
             }
@@ -174,7 +174,7 @@ function expand() {
         this.style.height = (300 + 25 * acount) + "px";
     }
 
-    if(cfg_bool[0]) {
+    if(window.cfg_bool[0]) {
         this.style.borderTop = cfg[9] + " solid " + cfg[8];
         this.style.borderBottom = cfg[9] + " solid " + cfg[8];
     }
@@ -191,7 +191,7 @@ String.prototype.replaceChars = function(character, replacement) {
     var b;
     var strLen = str.length;
 
-    for(var i=0; i < strLen; i++){
+    for(var i = 0; i < strLen; i++){
         if(str.charAt(i) == character){
             a = str.substr(0, i) + replacement;
             b = str.substr(i + 1);
