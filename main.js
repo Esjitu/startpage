@@ -15,6 +15,7 @@ $.getJSON("config.json", function(data) {
         data.style.border_width,
         data.style.search_color,
         data.style.search_bg_color,
+		data.style.link_hover_color,
         data.ext.ref,
         data.ext.bottom,
         data.ext.right,
@@ -42,6 +43,21 @@ $.getJSON("config.json", function(data) {
         "color": cfg[7]
     });
 
+	$("a").hover(
+		function() {
+			$(this).css({
+				"color": cfg[12],
+				"fontWeight": "bold"
+			});
+		},
+		function() {
+			$(this).css({
+				"color": cfg[7],
+				"fontWeight": "normal"
+			});
+		}
+	);
+
     $("body").css({
         "backgroundColor": cfg[4]
     });
@@ -59,12 +75,12 @@ $.getJSON("config.json", function(data) {
 
     if (window.cfg_bool[3]) {
         $("#bgimg").css({
-            "backgroundImage": "url('" + cfg[12] + "')",
-            "bottom": cfg[13],
-            "right": cfg[14],
-            "height": cfg[15],
-            "width": cfg[16],
-            "opacity": cfg[17]
+            "backgroundImage": "url('" + cfg[13] + "')",
+            "bottom": cfg[14],
+            "right": cfg[15],
+            "height": cfg[16],
+            "width": cfg[17],
+            "opacity": cfg[18]
         });
     }
     else {
