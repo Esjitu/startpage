@@ -35,7 +35,7 @@ a {
 	-webkit-transition: all .25s ease-in-out;
 	-o-transition: all .25s ease-in-out;
 	transition: all .25s ease-in-out;
-	vertical-align: middle;
+	vertical-align: top;
 }
 .content {
 	margin: 0 10px 0;
