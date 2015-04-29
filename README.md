@@ -1,4 +1,4 @@
-startpage (<a href="https://kibur.github.io/startpage/">kibur.github.io/startpage/</a>)
+startpage (NEW https://github.com/Kibur/startpages)
 ====
 
 ![example screenshot (150418)](https://i.imgur.com/WU5wngQ.png)
