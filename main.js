@@ -116,22 +116,33 @@ document.addEventListener("DOMContentLoaded", function() {
                     default:
                         window.location = "https://duckduckgo.com/?q=" + query.replaceChars(" ", "+");
                         break;
+                    case "-g ":
+                        query = query.substr(3);
+                        window.location="https://www.google.com/#q=" + query.replaceChars(" ", "+");
+                        break;
+                    case "-a ":
+                        query = query.substr(3);
+                        window.location="https://duckduckgo.com/?q=" + query.replaceChars(" ", "+");
+                        break;
                     case "-d ":
                         query = query.substr(3);
-                        window.location = "http://www.donmai.us/posts?tags=" + query.replaceChars(" ", "+");
+                        window.location="http://www.donmai.us/posts?tags=" + query.replaceChars(" ", "+");
+                        break;
+                    case "-y ":
+                        query = query.substr(3);
+                        window.location="https://www.youtube.com/results?search_query=" + query.replaceChars(" ", "+");
                         break;
                     case "-n ":
                         query = query.substr(3);
-                        window.location = "http://www.nicovideo.jp/search/" + query.replaceChars(" ", "%20");
+                        window.location="http://www.nicovideo.jp/search/" + query.replaceChars(" ", "%20");
                         break;
                     case "-p ":
                         query = query.substr(3);
-                        window.location = "http://www.pixiv.net/search.php?s_mode=s_tag&word=" + query.replaceChars(" ", "%20");
+                        window.location="http://www.pixiv.net/search.php?s_mode=s_tag&word=" + query.replaceChars(" ", "%20");
                         break;
                 }
-            }
-            else {
-                window.location = "https://www.google.com/#q=" + query.replaceChars(" ", "+");
+            }else{
+                window.location="https://www.google.com/#q=" + query.replaceChars(" ", "+");
             }
         }
     });
@@ -194,7 +205,9 @@ function expand() {
     }
 
     if (window.cfg_bool[0]) {
-        this.style.borderTop = cfg[9] + " solid " + cfg[8];
+
+    // It looks a bit less fancy, but I removed the top borders because they felt weird with the icons.
+        // this.style.borderTop = cfg[9] + " solid " + cfg[8];
         this.style.borderBottom = cfg[9] + " solid " + cfg[8];
     }
 }
