@@ -1,8 +1,8 @@
-startpage (NEW https://github.com/Kibur/startpages)
+modification of yukisuki's startpage featuring icons (https://github.com/yukisuki/startpage/)
 ====
 
-![example screenshot (150418)](https://i.imgur.com/WU5wngQ.png)
-![example screenshot expanded (150418)](https://i.imgur.com/ihojZtG.png)
+![example screenshot (150418)](http://i.imgur.com/4caj71v.png)
+![example screenshot expanded (150418)](http://i.imgur.com/R3VSBxi.png)
 
 
 <br>
