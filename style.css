@@ -29,7 +29,7 @@ a {
 	display: inline-block;
 	width: 150px;
 	height: 150px;
-	margin: 3px 1px;
+	margin: 15px 1px;
 	overflow: hidden;
     -moz-transition: all .25s ease-in-out;
 	-webkit-transition: all .25s ease-in-out;
@@ -51,11 +51,8 @@ span {
 
 #search_sqr > span {
     text-align: left;
-}
-
-#search_sqr {
     position: relative;
-    top: -20px;
+    top: 50px;
     vertical-align: middle;
 }
 
