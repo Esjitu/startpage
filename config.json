@@ -1,25 +1,24 @@
 {
     "bool": {
         "borders":              true,
-        "simplesearch":         false,
+        "simplesearch":         true,
         "alwaysopen":           false,
         "mascot":               false
     },
     
     "style": {
-        "heading_font":         "tewi",
-        "link_font":            "tewi",
-        "heading_font_size":    "10px",
-        "link_font_size":       "10px",
-        "background":           "#19191b",
-        "foreground":           "#121212",
-        "heading_color":        "#5e8d3b",
-        "link_color":           "#999999",
-        "border_color":         "#5e8d3b",
-        "border_width":         "2px",
-        "search_color":         "#cacaca",
-        "search_bg_color":      "#2a2a2a",
-		"link_hover_color":     "#ff8000"
+        "heading_font":         "Open Sans",
+        "link_font":            "Open Sans",
+        "heading_font_size":    "14px",
+        "link_font_size":       "14px",
+        "background":           "#282d34",
+        "foreground":           "#373d45",
+        "heading_color":        "#39a58d",
+        "link_color":           "#8c9aa8",
+        "border_color":         "#39a58d",
+        "border_width":         "4px",
+        "search_color":         "#8c9aa8",
+        "search_bg_color":      "#373d45"
     },
     
     "ext": {
