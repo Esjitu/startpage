@@ -1,11 +1,11 @@
 {
     "bool": {
         "borders":              true,
-        "simplesearch":         true,
+        "simplesearch":         false,
         "alwaysopen":           false,
         "mascot":               false
     },
-    
+
     "style": {
         "heading_font":         "Open Sans",
         "link_font":            "Open Sans",
@@ -20,7 +20,7 @@
         "search_color":         "#8c9aa8",
         "search_bg_color":      "#373d45"
     },
-    
+
     "ext": {
         "ref":                  "file://",
         "bottom":               "0",
