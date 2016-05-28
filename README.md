@@ -1,32 +1,30 @@
-modification of yukisuki's startpage featuring icons (https://github.com/yukisuki/startpage/)
+modification of [yukisuki's startpage](https://github.com/yukisuki/startpage/) featuring icons
 ====
 
-![example screenshot (150418)](http://i.imgur.com/4caj71v.png)
-![example screenshot expanded (150418)](http://i.imgur.com/R3VSBxi.png)
+![screenshot](http://i.imgbox.com/qxVNBi0S.png)
 
 
+## **Usage**
+The easiest way to make changes is by editing `config.json` and `index.html`, both found in the root `startpage` folder. Modify the included icon files as you wish, but do not change their names.
+
+#### **CONFIG.JSON**
+ **borders**: Defaults to `true`. Set to `false` to disable the colored strip on the bottom of the link dropdown.
 <br>
-
-##### Usage
-The easiest way to make changes is by editing __config.json__ and __index.html__.
-
+ **simplesearch**: Defaults to `false`. Set to `true` to only use Google for searching without prefixes.
 <br>
-###### JSON
-| attribute    | if true                                              |
-| ------------ | :--------------------------------------------------: |
-| borders      | enables borders on top and bottom                    |
-| simplesearch | only use Google for searching (removes search prefix)|
-| alwaysopen   | makes all squares open on load                       |
-| mascot       | enables image in the bottom right hand corner        |
-
-The other attributes should explain themselves.
-
+**alwaysopen**: Defaults to `false`. Set to `true` to make all squares open by default. **NOTE:** Due to the way I've modified yukisuki's original page, setting this to `false` will make the dropdowns look awkward and is **NOT RECOMMENDED**.
 <br>
-###### HTML
-To add/remove a square just add/remove a _div .sqr_ within _div #cell_.<br>
+**mascot**: Defaults to `false`. Set to `true` to enable a mascot image in the bottom right hand corner. Use the `ext` properties to link your image file and position it as you like.
+
+The `style` attributes should explain themselves.
+
+The default colors in the config are designed to match [my custom Firefox CSS](https://github.com/Esjitu/firefox). An alternate `config.json` has been included as well, designed to match the [Arc GTK](https://github.com/horst3180/arc-theme) and [Firefox](https://github.com/horst3180/arc-firefox-theme) themes. Simply copy the file from the `arc config` folder into the root directory and overwrite.
+
+#### **INDEX.HTML**
+To add/remove a square just add/remove a `div .sqr` within `div #cell`.<br>
 Keep the structure like this:
-```
-<div class="sqr">
+
+```<div class="sqr">
     <span>HEADING</span>
     <div class="content">
         <a href="URL">LINK TITLE</a><br>
@@ -34,19 +32,27 @@ Keep the structure like this:
         ...
         <a href="URL">LINK TITLE</a>
     </div>
-</div>
-```
+</div>```
 
+## **Advanced Search**
+This allows the use of special prefixes to search various websites directly through the startpage's search bar.
 <br>
-###### advanced search
-```
--g      Google
--a      DuckDuckGo
--d      danbooru
--y      YouTube
--n      niconicodouga
--p      pixiv
-```
-The following example will search for _github_ using _Google_.<br>
--g github<br>
-For danbooru, use underscores (_) for tags with more than one word and separate multiple tags with space (e.g.: school_uniform 1girl).
+For instance, to search for `github` using **Wikipedia**, you would enter `-w github`.
+
+ **no prefix**: Search Google.
+<br>
+ **-i**: Search Google Images.
+<br>
+**-w**: Search Wikipedia.
+<br>
+**-d**: Search Danbooru. Be sure to use underscores (_) for tags with more than one word, and separate multiple tags with a space (ex: `school_uniform 1girl`).
+<br>
+**-y**: Search YouTube.
+<br>
+**-n**: Searches Nyaa within the English-Translated Anime category.
+<br>
+**-p**: Searches Pixiv.
+
+The search engines and prefixes can be modified in `js/main.js`. Don't mess with this if you don't know what you're doing!!
+
+![in action](http://i.imgbox.com/GXoOblE5.gif)
