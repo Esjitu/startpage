@@ -1,4 +1,4 @@
-modification of [yukisuki's startpage](https://github.com/yukisuki/startpage/) featuring icons
+modification of [fuyuneko's startpage](https://github.com/yukisuki/startpage/) featuring icons
 ====
 
 ![screenshot](http://i.imgbox.com/qxVNBi0S.png)
