@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
 	<name>startpage</name>
-	<comment></comment>
+	<comment>simple startpage with icons.</comment>
 	<projects>
 	</projects>
 	<buildSpec>
