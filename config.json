@@ -13,9 +13,9 @@
         "link_font_size":       "14px",
         "background":           "#282d34",
         "foreground":           "#373d45",
-        "heading_color":        "#39a58d",
+        "heading_color":        "#39A58D",
         "link_color":           "#8c9aa8",
-        "border_color":         "#39a58d",
+        "border_color":         "#39A58D",
         "border_width":         "4px",
         "search_color":         "#8c9aa8",
         "search_bg_color":      "#373d45"

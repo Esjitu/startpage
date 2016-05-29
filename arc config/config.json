@@ -1,0 +1,32 @@
+{
+    "bool": {
+        "borders":              true,
+        "simplesearch":         false,
+        "alwaysopen":           false,
+        "mascot":               false
+    },
+
+    "style": {
+        "heading_font":         "Droid Sans",
+        "link_font":            "Droid Sans",
+        "heading_font_size":    "14px",
+        "link_font_size":       "14px",
+        "background":           "#2B2E39",
+        "foreground":           "#404552",
+        "heading_color":        "#5294E2",
+        "link_color":           "#AFB8C5",
+        "border_color":         "#5294E2",
+        "border_width":         "6px",
+        "search_color":         "#AFB8C5",
+        "search_bg_color":      "#404552"
+    },
+
+    "ext": {
+        "ref":                  "",
+        "bottom":               "10",
+        "right":                "0",
+        "height":               "350px",
+        "width":                "450px",
+        "opacity":              ".2"
+    }
+}

@@ -114,15 +114,15 @@ document.addEventListener("DOMContentLoaded", function() {
             if (!window.cfg_bool[1]) {
                 switch(query.substr(0,3)) {
                     default:
-                        window.location = "https://duckduckgo.com/?q=" + query.replaceChars(" ", "+");
+                        window.location = "https://www.google.com/#q=" + query.replaceChars(" ", "+");
                         break;
-                    case "-g ":
+                    case "-i ":
                         query = query.substr(3);
-                        window.location="https://www.google.com/#q=" + query.replaceChars(" ", "+");
+                        window.location="https://www.google.com/search?biw=1280&bih=685&tbm=isch&sa=1&q=" + query.replaceChars(" ", "+");
                         break;
-                    case "-a ":
+                    case "-w ":
                         query = query.substr(3);
-                        window.location="https://duckduckgo.com/?q=" + query.replaceChars(" ", "+");
+                        window.location="https://en.wikipedia.org/w/index.php?search=" + query.replaceChars(" ", "+");
                         break;
                     case "-d ":
                         query = query.substr(3);
@@ -134,7 +134,7 @@ document.addEventListener("DOMContentLoaded", function() {
                         break;
                     case "-n ":
                         query = query.substr(3);
-                        window.location="http://www.nicovideo.jp/search/" + query.replaceChars(" ", "%20");
+                        window.location="http://www.nyaa.se/?page=search&cats=1_37&filter=0&term=" + query.replaceChars(" ", "+");
                         break;
                     case "-p ":
                         query = query.substr(3);
@@ -146,7 +146,7 @@ document.addEventListener("DOMContentLoaded", function() {
             }
         }
     });
-    
+
     document.addEventListener("keypress", function search(a) {
         var key = a.keyCode;
 
@@ -158,7 +158,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
             document.getElementById("searchinput").focus();
         }
-    
+
         if ([9].indexOf(key) > -1) {
             a.preventDefault();
         }

@@ -38,8 +38,8 @@ a {
 	vertical-align: top;
 }
 .content {
-	margin: 0 10px 0;
-	line-height: 25px;
+	margin: 0 0px 0;
+	line-height: 10px;
 }
 
 span {
@@ -52,13 +52,15 @@ span {
 #search_sqr > span {
     text-align: left;
     position: relative;
-    top: 50px;
+    top: 15px;
     vertical-align: middle;
 }
 
 #searchinput {
     width: 500px;
     height: 37px;
+    position: relative;
+    top: -30px;
     margin: -70px 0 0 0;
     padding: 0 10px;
     border: none;
